@@ -1,0 +1,19 @@
+.button {
+  background: white;
+  padding: 1em 6em;
+  border-radius: 50px;
+  box-shadow: 0px 5px 5px rgba(black, 0.2);
+  border: 2px solid white;
+  transition: 300ms;
+
+  &:hover {
+    background: $color-primary;
+    color: white;
+  }
+}
+
+@include for-desktop-up {
+  .button {
+    padding: 1em 5em;
+  }
+}

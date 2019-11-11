@@ -1,0 +1,50 @@
+.footer {
+  &__list {
+    list-style: none;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, max-content);
+    justify-content: center;
+    align-items: start;
+    gap: 1em;
+  }
+
+  &__list-item {
+    border: 1px solid white;
+    border-radius: 50px;
+    display: grid;
+    place-items: center;
+    padding: 0.375em;
+    transition: 300ms;
+  }
+
+  &__list-item:hover {
+    background: white;
+
+    .footer__link {
+      path {
+        fill: $color-primary;
+      }
+    }
+  }
+
+  &__link {
+    width: 1.125rem;
+    height: 1.125rem;
+    transition: 300ms;
+  }
+
+  &__link:hover {
+    path {
+      fill: $color-primary;
+    }
+  }
+}
+
+@include for-desktop-up {
+  .footer {
+    margin-left: auto;
+  }
+}

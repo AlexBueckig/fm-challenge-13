@@ -1,0 +1,28 @@
+.container {
+  display: grid;
+  grid-template-columns: 2.5em minmax(auto, 700px) 2.5em;
+  grid-template-rows: auto 1fr auto;
+  justify-items: center;
+  place-content: center;
+  min-height: 100vh;
+  background-image: url(../images/bg-mobile.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: $color-primary;
+  gap: 2em 0;
+
+  & > * {
+    grid-column: 2;
+  }
+
+  &--left {
+    justify-self: start;
+  }
+}
+
+@include for-desktop-up {
+  .container {
+    grid-template-columns: minmax(2em, auto) minmax(1000px, 1400px) minmax(2em, auto);
+    background-image: url(../images/bg-desktop.svg);
+  }
+}

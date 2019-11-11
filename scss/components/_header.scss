@@ -1,0 +1,15 @@
+.header {
+  padding: 2em 0 4em;
+  &__logo {
+    height: 2rem;
+  }
+}
+
+@include for-desktop-up {
+  .header {
+    padding: 2em 0 0;
+    &__logo {
+      height: 4rem;
+    }
+  }
+}

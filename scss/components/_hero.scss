@@ -1,0 +1,46 @@
+.hero {
+  margin-bottom: 3em;
+  &__image {
+    width: 100%;
+  }
+
+  &__title {
+    margin: 2em 0 1em;
+  }
+
+  &__subtitle {
+    margin-bottom: 2em;
+  }
+}
+
+@include for-desktop-up {
+  .hero {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr repeat(3, auto) 1fr;
+    grid-template-areas: 'image .' 'image title' 'image subtitle' 'image button' 'image .';
+    justify-items: start;
+    align-items: center;
+    gap: 1em 4em;
+
+    &__image {
+      grid-area: image;
+    }
+
+    &__title {
+      grid-area: title;
+      margin: 0;
+      margin-right: 2em;
+    }
+
+    &__subtitle {
+      grid-area: subtitle;
+      margin: 0;
+      margin-right: 2em;
+    }
+  }
+
+  .button {
+    grid-area: button;
+  }
+}
